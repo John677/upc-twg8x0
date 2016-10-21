@@ -1,0 +1,27 @@
+Привет Felis-Sapiens. Я по поводу твоего скрипта для просмотра конфигурационных файлов с сигнатурой 'COMPCS'
+Как с тобой можно связаться? 
+У меня не получается просмотреть конфиг, есть ошибки, хочу скинуть конфиг чтобы ты его посмотрел
+
+Вот лог ошибок
+
+Traceback (most recent call last):
+  File "COMPCS_viewer.py", line 92, in format_data
+    return ' '.join(map(lambda x: '{:02X}'.format(x), data))
+  File "COMPCS_viewer.py", line 92, in <lambda>
+    return ' '.join(map(lambda x: '{:02X}'.format(x), data))
+ValueError: zero length field name in format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "COMPCS_viewer.py", line 161, in <module>
+    main()
+  File "COMPCS_viewer.py", line 155, in main
+    print_tree(cfg_tree, mib_table, outfile=out)
+  File "COMPCS_viewer.py", line 109, in print_tree
+    print(format_data(node[1], type), file=outfile)
+  File "COMPCS_viewer.py", line 94, in format_data
+    return ' '.join(map(lambda x: '{:02X}'.format(x), data)) + ' [ERROR]'
+  File "COMPCS_viewer.py", line 94, in <lambda>
+    return ' '.join(map(lambda x: '{:02X}'.format(x), data)) + ' [ERROR]'
+ValueError: zero length field name in format
